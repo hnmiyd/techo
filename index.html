@@ -1,71 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techo - Home</title>
+    <title>Techo</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.9/lottie.min.js"></script>
+    <style>
+        #lottie-container {
+            width: 300px;
+            height: 300px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+    </style>
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <a href="index.html">
-                <h3>Techo</h3>
-            </a>
+            <h3>Techo</h3>
         </div>
-        <i class="fa-solid fa-bars" id="hamburger"></i>
-        <nav class="menu">
-            <ul>
-                <li class="active-li"><a href="index.html">Home</a></li>
-                <li><a href="3d.html">3D</a></li>
-                <li><a href="notifications.html">Notifications</a></li>
-                <li><a href="cart.html">Cart</a></li>
-                <li><a href="account.html">Account</a></li>
-            </ul>
-        </nav>
     </header>
+
     <main>
-        <section class="home" id="home">
-            <h2 class="sec-title">Featured Products</h2>
-            <div class="carousel">
-                <div class="product">
-                    <img src="img/product1.jpg" alt="Product 1">
-                    <h3>Product 1</h3>
-                    <p>Description of Product 1. Price: $20</p>
-                    <button>Add to Cart</button>
+        <section class="login-form">
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
                 </div>
-                <div class="product">
-                    <img src="img/product2.jpg" alt="Product 2">
-                    <h3>Product 2</h3>
-                    <p>Description of Product 2. Price: $25</p>
-                    <button>Add to Cart</button>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
-                <!-- Add more products here -->
-                <div class="product">
-                    <img src="img/product3.jpg" alt="Product 3">
-                    <h3>Product 3</h3>
-                    <p>Description of Product 3. Price: $30</p>
-                    <button>Add to Cart</button>
-                </div>
-                <div class="product">
-                    <img src="img/product4.jpg" alt="Product 4">
-                    <h3>Product 4</h3>
-                    <p>Description of Product 4. Price: $35</p>
-                    <button>Add to Cart</button>
-                </div>
+                <button type="submit">Login</button>
+            </form>
+            <div class="social-login">
+                <p>Or login with:</p>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
             </div>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="js/script.js"></script>
 
+    <div id="lottie-container"></div>
+    <script>
+        // JavaScript code to handle login submission and show Lottie animation
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            var animation = bodymovin.loadAnimation({
+                container: document.getElementById("lottie-container"),
+                renderer: "svg",
+                loop: true,
+                autoplay: true,
+                path: "https://lottie.host/d38b60f1-d12b-4daf-abfc-37e5fadbeabf/0vBlzPwCQR.json"
+            });
+
+            setTimeout(function() {
+                window.location.href = "home.html";
+            }, 2500);
+        });
+    </script>
 </body>
+
 </html>

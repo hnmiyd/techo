@@ -153,8 +153,12 @@ nav ul li a {
 
 
 .carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 90%;
-    margin: 0 auto;
+    margin: 0px auto;
+    margin-top: 4rem;
 }
 
 .product {
@@ -164,12 +168,22 @@ nav ul li a {
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin: 10px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    
 }
-
+.product:hover img{
+    transform: scale(1.1);
+  }
 .product img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.3s linear;
 }
 
 .product h3 {
@@ -218,13 +232,13 @@ header {
 .sketchfab-embed-wrapper {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     padding: 20px;
 }
 
 .sketchfab-embed {
-    width: 85%;
+    width: 75%;
     height: 400 px; 
     border-radius: 30px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
@@ -284,8 +298,8 @@ header {
 
  .cart-item {
     background-color: #f4f4f4;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 50px;
+    margin-bottom: 50px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -303,6 +317,7 @@ header {
     font-size: 20px;
     color: #333;
     margin-bottom: 10px;
+    
 }
 
 .item-details p {
@@ -435,6 +450,34 @@ footer {
 
 .b-button:hover {
     background-color: #4a47a3; 
+}
+
+.contact{
+    margin-top: 5rem;
+}
+.contact p{
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 18px;
+    color: grey;
+}
+.contact .links{
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem 0px;
+
+}
+.links a{
+    font-size: 40px;
+    transition: all 0.3s ease;
+    color: #333;
+}
+.links a:hover{
+    transform: scale(1.2);
 }
 
 @media screen and (max-width: 576px) {

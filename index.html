@@ -77,11 +77,8 @@
         .then(response => {
             if (response.ok) {
                 // Redirect user to home.html upon successful upload
-                        // JavaScript code to handle login submission and show Lottie animation
-        document.getElementById("login-form").addEventListener("submit", function(event) {
-            event.preventDefault(); // Prevent default form submission
-
-            var animation = bodymovin.loadAnimation({
+                // JavaScript code to handle login submission and show Lottie animation
+                var animation = bodymovin.loadAnimation({
                 container: document.getElementById("lottie-container"),
                 renderer: "svg",
                 loop: true,
@@ -92,9 +89,8 @@
             setTimeout(function() {
                 window.location.href = "home.html";
             }, 2500);
-        });
+            
             } else {
-                // Handle error if upload fails
                 alert("Failed to upload user data");
             }
         })

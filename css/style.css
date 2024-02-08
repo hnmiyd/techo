@@ -31,7 +31,10 @@ header {
     color: #fff;
     border-radius: 25px;
 }
-
+.logo-img {
+    width: 100px; 
+    height: auto; 
+}
 .logo a {
     color: #fff;
 }

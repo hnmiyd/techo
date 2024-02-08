@@ -1,5 +1,5 @@
 # Techo
-
+Github Page Link: https://hnmiyd.github.io/techo/
 ## Design Process
 
 API developer- Wei Xian

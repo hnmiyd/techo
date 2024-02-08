@@ -2,6 +2,9 @@
 
 ## Design Process
 
+API developer- Wei Xian
+Front End Developer - Wei Xian and Denette
+
 Provide us insights about your design process, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.
 Our design process is to create a simple, interactive and fully responsive Technology E-commerce website called TECHO that has api implementations and lotties for a good user experience. Our users will mainly be younger people who are tech-savvy and buy tech products often. Therefore, our website has a bold, pop of colour, rounded designs, with micro interactions to keep up with the latest design trends. They are looking forward to get great deals on tech products and our website achieves that, by mainly focusing on technology related items to lower operational costs, and also implementing 'tokens' that users can leverage on to slash prices. Gamification aspects are also well integrated to retain these tech-savvy users.
 
